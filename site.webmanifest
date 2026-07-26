@@ -1,0 +1,18 @@
+{
+  "name": "Mohanned Albosh — Portfolio",
+  "short_name": "Mohanned Albosh",
+  "description": "Business Analyst, Product Operations, BI, CRM architecture, automation and e-commerce operations.",
+  "lang": "en",
+  "dir": "auto",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    { "src": "assets/icons/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "assets/icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

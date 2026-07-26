@@ -1,0 +1,14 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Personal source material — NOT for the public site
+# (raw résumé .docx and planning notes stay local, out of the published repo)
+_source/
+
+# Local tooling / test artifacts
+.playwright-mcp/
+*.log
