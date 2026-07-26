@@ -13,6 +13,9 @@ assets/js/i18n.js     I18N object (EN + AR copy) — loaded first
 assets/js/main.js     lang toggle, reveal, counters, SVG charts (uses I18N global)
 assets/icons/         favicon.svg + PNGs (16/32/180/512), rendered from templates
 assets/og-image.png   1200x630 social preview
+card/                 shareable portrait business card (55x85mm)
+  business-card.html  self-contained card, QR embedded inline as static SVG (no JS/deps)
+  mohanned-card.png   832x1288 render (share/attach)   mohanned-card.pdf  print-ready
 _source/              raw résumé .docx + planning notes — GIT-IGNORED, never published
 ```
 
@@ -28,6 +31,12 @@ _source/              raw résumé .docx + planning notes — GIT-IGNORED, never
   root path. If the username/repo changes, update those files.
 - **Regenerating images:** icons/OG were rendered from HTML/SVG templates via a headless
   browser screenshot, then `sips`-downscaled. See README "Regenerating the icons".
+- **Business card (`card/`):** the QR is a static SVG path generated offline with `segno`
+  (error level H) encoding the live URL, embedded inline in `business-card.html` — no
+  runtime library. PNG/PDF are rendered from that HTML with headless Chrome
+  (`--screenshot` at `--force-device-scale-factor=4`, and `--print-to-pdf` with a
+  `@page{size:55mm 85mm}` rule). If contact details or the live URL change, regenerate
+  the QR and re-render both. Verify the QR still decodes to the right URL after any edit.
 - **Bilingual / RTL:** language is toggled by swapping `dir`/`lang` on `<html>` and
   replacing every `[data-i18n]` node from the `I18N` object in the script. Choice is
   persisted in `localStorage` (`mab-lang`). Default is English.
